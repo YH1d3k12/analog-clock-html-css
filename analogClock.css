@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap');
+
+:root {
+    --section-background-color: linear-gradient(45deg, #151515, #1c1c1c);
+    --analog-clock-dial-border-color: linear-gradient( -72deg, #ffc373, #ffffff 16%, #ffc373 21%, #ffffff 24%, #a17434 27%, #ffc373 36%, #ffffff 45%, #ffffff 60%, #ffc373 72%, #ffffff 80%, #ffc373 84%, #a17434 );
+    --analog-clock-dial-background: linear-gradient(45deg, rgba(187,190,197,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+.section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: var(--section-background-color);
+}
+
+.analog-clock-dial-border {
+    height: 280px;
+    width: 280px;
+
+    background: var(--analog-clock-dial-border-color);
+    box-shadow: 0px 0px 15px 1px #1c1c1c inset;
+}
+
+.analog-clock-dial-border,
+.analog-clock-dial {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    border: solid 0.3px #a17434;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.analog-clock-dial {
+    position: relative;
+
+    height: 240px;
+    width: 240px;
+
+    background: var(--analog-clock-dial-background);
+    box-shadow: 0px 0px 60px 1px #1c1c1c inset;
+}
+
+.number {
+    position: absolute;
+    font-size: 16px;
+    font-family: 'Instrument Serif', serif;
+    transform: translate(-50%, -50%);
+}
+
+.number-1 {
+    top: 10%;
+    left: 73.5%;
+}
+
+.number-2 {
+    top: 27.5%;
+    left: 90%;
+}
+
+.number-3 {
+    top: 50%;
+    left: 95%;
+}
+
+.number-4 {
+    top: 72.5%;
+    left: 90%;
+}
+
+.number-5 {
+    top: 90%;
+    left: 73.5%;
+}
+
+.number-6 {
+    top: 95%;
+    left: 50%;
+}
+
+.number-7 {
+    top: 90%;
+    left: 26.5%;
+}
+
+.number-8{
+    top: 72.5%;
+    left: 10%;
+}
+
+.number-9 {
+    top: 50%;
+    left: 5%;
+}
+
+.number-10 {
+    top: 27.5%;
+    left: 10%;
+}
+
+.number-11 {
+    top: 10%;
+    left: 26.5%;
+}
+
+.number-12 {
+    top: 5%;
+    left: 50%;
+}
+
+/* Código de suporte para visualizar os angulos do relógio */
+.support-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    height: 1px;
+    width: 120%;
+
+    background: red;
+    transform-origin: center;
+}
+
+.line-30 {
+    transform: translate(-50%, -50%) rotate(30deg);
+}
+
+.line-60 {
+    transform: translate(-50%, -50%) rotate(60deg);
+}
+
+.line-90 {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.line-120 {
+    transform: translate(-50%, -50%) rotate(120deg);
+}
+
+.line-150 {
+    transform: translate(-50%, -50%) rotate(150deg);
+}
+
+.line-180 {
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+@media (min-width: 1024px) {
+    .analog-clock-dial-border {
+        height: 520px;
+        width: 520px;
+    }
+
+    .analog-clock-dial {
+        position: relative;
+        height: 480px;
+        width: 480px;
+    }
+
+    .number {
+        font-size: 30px;
+    }
+}
