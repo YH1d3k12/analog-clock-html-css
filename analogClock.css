@@ -24,8 +24,8 @@
 }
 
 .analog-clock-dial-border {
-    height: 280px;
-    width: 280px;
+    height: 260px;
+    width: 260px;
 
     background: var(--analog-clock-dial-border-color);
     box-shadow: 0px 0px 15px 1px #1c1c1c inset;
@@ -50,6 +50,86 @@
 
     background: var(--analog-clock-dial-background);
     box-shadow: 0px 0px 60px 1px #1c1c1c inset;
+}
+
+.inner-analog-clock-border {
+    height: 170px;
+    width: 170px;
+
+    background: var(--analog-clock-dial-border-color);
+    box-shadow: 0px 0px 15px 1px #1c1c1c inset;
+}
+
+.inner-analog-clock-border,
+.inner-analog-clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    border: solid 0.3px #a17434;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.inner-analog-clock {
+    height: 150px;
+    width: 150px;
+
+    background: var(--analog-clock-dial-background);
+    box-shadow: 0px 0px 60px 1px #1c1c1c inset;
+}
+
+.point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    height: 5px;
+    width: 5px;
+    border: 1px solid #a17434;
+    border-radius: 50%;
+
+    background: #1c1c1c;
+    transform: translate(-50%, -50%);
+}
+
+.hour-pointer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    height: 130%;
+    width: 80%;
+
+    background: #1c1c1c;
+    clip-path: polygon(55% 15%, 52% 25%, 52% 50%, 48% 50%, 48% 25%, 45% 15%, 50% 0%);
+    transform: translate(-50%, -50%);
+}
+
+.minute-pointer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    height: 110%;
+    width: 80%;
+
+    background: #1c1c1c;
+    clip-path: polygon(55% 15%, 52% 25%, 52% 50%, 48% 50%, 48% 25%, 45% 15%, 50% 0%);
+    transform: translate(-50%, -50%);
+}
+
+.second-pointer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    height: 90%;
+    width: 80%;
+
+    background: #1c1c1c;
+    clip-path: polygon(51% 15%, 51% 25%, 52% 50%, 48% 50%, 49% 25%, 49% 15%, 50% 0%);
+    transform: translate(-50%, -50%);
 }
 
 .number {
@@ -119,8 +199,8 @@
     left: 50%;
 }
 
-/* Código de suporte para visualizar os angulos do relógio */
-.support-line {
+/* CÃ³digo de suporte para visualizar os angulos do relÃ³gio */
+/* .support-line {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -130,7 +210,7 @@
 
     background: red;
     transform-origin: center;
-}
+} */
 
 .line-30 {
     transform: translate(-50%, -50%) rotate(30deg);
@@ -166,6 +246,21 @@
         position: relative;
         height: 480px;
         width: 480px;
+    }
+
+    .inner-analog-clock-border {
+        height: 320px;
+        width: 320px;
+    }
+    
+    .inner-analog-clock {   
+        height: 280px;
+        width: 280px;
+    }
+
+    .point {
+        height: 25px;
+        width: 25px;
     }
 
     .number {
